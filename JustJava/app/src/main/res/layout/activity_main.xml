@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width = "match_parent"
+        android:layout_height="match_parent">
+        <!-- To enable scrolling -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <EditText
+                android:textColor="@android:color/black"
+                android:hint="@string/name"
+                android:id = "@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapWords"/>
+
+            <TextView
+                android:id = "@+id/toppings_text"
+                android:text = "toppings"
+                style = "@style/CustomStyle"
+                android:textAllCaps = "true"
+                android:layout_below = "@id/edit_text"/>
+
+            <CheckBox
+                android:id = "@+id/checkbox_whipped_cream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toppings_text"
+                android:paddingLeft="30dp"
+                android:onClick="addCream"
+                android:text = "@string/wc_checkbox_label"/>
+
+            <TextView
+                android:id = "@+id/qty_heading"
+                android:layout_below = "@id/checkbox_whipped_cream"
+                style = "@style/CustomStyle"
+                android:textAllCaps="true"
+                android:text="QUANTITY" />
+
+            <LinearLayout
+                android:id = "@+id/linear_layout"
+                android:layout_below = "@id/qty_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id = "@+id/inc_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "@string/qty_inc"
+                    android:onClick="increment"
+                    />
+                <TextView
+                    android:id="@+id/qty_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <Button
+                    android:id = "@+id/dec_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decrement"
+                    android:text = "@string/qty_dec"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/order_button"
+                android:padding="4dp"
+                android:text="@string/order_button"
+                android:layout_below = "@id/linear_layout"
+                android:onClick="order"/>
+
+            <TextView
+                android:id = "@+id/bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_button"
+                android:text = ""
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>

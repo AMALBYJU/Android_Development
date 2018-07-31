@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created using Translations Editor, LOCALISATION EXAMPLE -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Solo Java</string>
+    <string name="qty_inc">+</string>
+    <string name="email_id">amalbyju98@gmail.com</string>
+    <string name="email_subject">" Correo electrónico de prueba de Android"</string>
+    <string name = "msg_inc"><xliff:g id = "msg+" example = "abcd">%s</xliff:g></string>
+    <string name="name">Introduzca su nombre aquí</string>
+    <string name="wc_checkbox_label">" Crema batida"</string>
+    <string name="order_button">ORDENAR</string>
+    <string name="qty_dec">-</string>
+</resources>
